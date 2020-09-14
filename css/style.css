@@ -1,0 +1,59 @@
+
+.container{
+    width:90%;
+    margin:0 auto;
+    display:flex;
+    flex-direction: column;
+}
+.row{
+    display:flex;
+    flex-direction: row;
+}
+.col{
+    width:50%;
+    padding:5px;
+}
+
+.colDetails {
+    padding-left: 120px;
+}
+
+.col_form, .col_details, .reservation_details, .confirmed_details {
+    border:4px;
+    border-style: dotted;
+    display: inline-block;
+    border-spacing: 80px;
+    width:50%;
+    padding:10px;
+    margin:2px;
+}
+
+
+.col_form, .col_details {
+    background-color: lightgreen;
+}
+
+.reservation_details, .confirmed_details {
+    background-color: lightgrey;
+}
+
+.customer_details {
+    border:1px;
+    border-color:white;
+    border-collapse: separate;
+    border-spacing: 8px 0px;
+    font-size: 15.5px;
+}
+
+.heading {
+    font-size: 50px;
+    margin-left: 80px;
+    
+}
+
+#errorMsg {
+    text-align: center;
+    color:red;
+    background-color: burlywood;
+    font-size: larger;
+}
