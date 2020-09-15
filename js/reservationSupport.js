@@ -13,12 +13,12 @@ var total;
 var table, new_row;
 var adults = [];
 var childs = [];
-var total_record = [];
 var noOfReserv;
 var resAvgCost;
 var ttAdults;
 var ttChilds;
 var today;
+
 
 function fare_calculation() {
     var cus_name = document.getElementById("name_text").value;
@@ -78,13 +78,14 @@ function fare_calculation() {
     var eDate = new Date(r_end_date);
 
     
-    today = new Date();
-    if (sDate.getTime() < today.getTime()) {
-        error = " Reservation starting date can't be in past";
-        valid = false;
-        updateMessage();
-        return;
-    }
+    // today = new Date();
+    
+    // if (sDate.getTime() < today.getTime()) {
+    //     error = " Reservation starting date can't be today or past";
+    //     valid = false;
+    //     updateMessage();
+    //     return;
+    // }
 
     if (eDate.getTime() <= sDate.getTime()) {
         error = "Reservation Starting date cannot be greater than end date";
@@ -143,22 +144,23 @@ function fare_calculation() {
     
     adults.push(allAdults);
     childs.push(allChilds);
-    total_record.push(total);
+    
+    allReservationCost +=  total;
 
-
+    reservation_count += 1;
     
     noOfReserv = reservations.length;
     ttAdults = Math.max(...adults);
     ttChilds = Math.max(...childs);
     
-    
+    resAvgCost = allReservationCost / reservation_count;
 
     
     
 
 
     updateMessage();
-    reservation_count += 1;
+    
 
     
                                                                  

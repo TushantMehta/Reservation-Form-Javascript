@@ -33,20 +33,21 @@ function updateMessage(){
     else {
 
         document.getElementById("errorMsg").textContent = error;
-        cel1.textContent = reservations[reservation_count].name;
-        cel2.textContent = reservations[reservation_count].phone;
-        cel3.textContent = reservations[reservation_count].adults;
-        cel4.textContent = reservations[reservation_count].childs;
-        cel5.textContent = reservations[reservation_count].start_date;
-        cel6.textContent = reservations[reservation_count].end_date;
+        cel1.textContent = reservations[(reservation_count - 1)].name;
+        cel2.textContent = reservations[(reservation_count - 1)].phone;
+        cel3.textContent = reservations[(reservation_count - 1)].adults;
+        cel4.textContent = reservations[(reservation_count - 1)].childs;
+        cel5.textContent = reservations[(reservation_count - 1)].start_date;
+        cel6.textContent = reservations[(reservation_count - 1)].end_date;
         cel7.textContent = "$" + subtotal;
         cel8.textContent = "$" + tax;
         cel9.textContent = "$" + total.toFixed(2);
 
         document.getElementById("noOfReservations").textContent = "Number  of Reservations: " + noOfReserv;
+        document.getElementById("reservationsAvgCost").textContent = "Average of reservations Total: $" + resAvgCost.toFixed(2);
         document.getElementById("totalAdult").textContent = "Total Number of Adult customers: " + ttAdults;
         document.getElementById("totalChilds").textContent = "Total Number of underage customers: " + ttChilds;
-        //document.getElementById("reservationsAvgCost").textContent = "Average of reservations Total: " + resAvgCost;
+        
         
 
                                                                   
